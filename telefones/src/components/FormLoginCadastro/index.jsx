@@ -2,7 +2,7 @@ import TextField from '@material-ui/core/TextField';
 import Typography from '@material-ui/core/Typography';
 import React from 'react';
 import { Controller, FormProvider, useForm } from 'react-hook-form';
-import { useStyles } from './../../containers/Home/styles';
+import { useStyles } from './styles';
 import ButtonUI from './../ButtonUI/index';
 
 const FormLoginCadastro = () => {
@@ -20,7 +20,7 @@ const FormLoginCadastro = () => {
           <Typography component='h4' headline='h2'>
             Entrar
           </Typography>
-          <div className={styles.formulario}>
+          <div>
             <Controller
               as={TextField}
               type='text'
