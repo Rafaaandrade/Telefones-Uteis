@@ -14,6 +14,10 @@ export const useStyles = makeStyles(() => ({
     width: '100%',
     display: 'flex',
   },
+  font: {
+    fontWeight: 'bold',
+    marginBottom: '50px',
+  },
 }));
 
 export default useStyles;
