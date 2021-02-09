@@ -5,7 +5,6 @@ export const useStyles = makeStyles(() => ({
     width: '55%',
     display: 'flex',
     backgroundColor: 'white',
-    height: '100%',
     minHeight: ({ height = 625 }) => height,
   },
   painelDireito: {
@@ -19,15 +18,25 @@ export const useStyles = makeStyles(() => ({
   },
   content: {
     display: 'flex',
-    flexFlow: 'row wrap',
     width: '100%',
-    justifyContent: 'center',
   },
   logo: {
-    position: 'absolute',
-    top: 100,
-    left: 100,
-    width: '20%',
+    marginTop: '80px',
+    marginLeft: '80px',
+  },
+  imagem: {
+    width: '80%',
+  },
+  text: {
+    marginTop: '15px',
+    borderTop: '4px solid green',
+    fontSize: '28px',
+    color: 'green',
+  },
+  divider: {
+    '& .MuiDivider-root': {
+      backgroundColor: 'green',
+    },
   },
 }));
 

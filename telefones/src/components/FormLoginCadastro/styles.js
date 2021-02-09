@@ -9,6 +9,7 @@ export const useStyles = makeStyles(() => ({
   },
   label: {
     color: 'white',
+    fontSize: '10px',
   },
   formulario: {
     width: '100%',
@@ -17,6 +18,23 @@ export const useStyles = makeStyles(() => ({
   font: {
     fontWeight: 'bold',
     marginBottom: '50px',
+  },
+  input: {
+    '& div.MuiInputBase-root': {
+      color: 'white',
+    },
+    '& label.Mui-focused': {
+      color: 'white',
+    },
+    '& label': {
+      color: 'white',
+    },
+    '& .MuiInput-underline:after': {
+      borderBottomColor: 'white',
+    },
+    '& .MuiInput-underline:before': {
+      borderBottomColor: 'white',
+    },
   },
 }));
 
