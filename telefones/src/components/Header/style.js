@@ -10,6 +10,11 @@ export const useStyles = makeStyles(() => ({
     height: '12%',
     backgroundColor: '#41AF80',
   },
+  content: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    width: '100%',
+  },
 }));
 
 export default useStyles;

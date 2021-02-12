@@ -69,7 +69,7 @@ const FormLoginCadastro = () => {
                 }}
                 variant='contained'
                 type='submit'
-                text='Entrar'
+                text={isCadastro ? 'Cadastrar' : 'Entrar'}
               />
             </Box>
           </Box>

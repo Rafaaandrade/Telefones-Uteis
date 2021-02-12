@@ -8,10 +8,15 @@ const Header = () => {
   const styles = useStyles();
 
   return (
-    <AppBar className={styles.appbar}>
-      <img src={IMAGES} className={styles.imagem} />
-      <MenuUI />
-    </AppBar>
+    <>
+      <AppBar className={styles.appbar}>
+        <div className={styles.content}>
+          <img src={IMAGES} className={styles.imagem} alt='' />
+
+          <MenuUI />
+        </div>
+      </AppBar>
+    </>
   );
 };
 
