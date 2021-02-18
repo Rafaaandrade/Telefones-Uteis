@@ -11,8 +11,9 @@ const Header = () => {
     <>
       <AppBar className={styles.appbar}>
         <div className={styles.content}>
-          <img src={IMAGES} className={styles.imagem} alt='' />
-
+          <div>
+            <img src={IMAGES} className={styles.imagem} alt='' />
+          </div>
           <MenuUI />
         </div>
       </AppBar>

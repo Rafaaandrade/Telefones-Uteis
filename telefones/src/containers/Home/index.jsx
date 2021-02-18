@@ -14,7 +14,6 @@ const HomeContainer = () => {
           <div className={styles.text}>Telefones Úteis</div>
         </div>
       </div>
-
       <div className={styles.painelDireito}>
         <FormLoginCadastro />
       </div>

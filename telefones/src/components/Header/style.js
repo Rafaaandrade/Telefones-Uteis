@@ -2,12 +2,12 @@ import { makeStyles } from '@material-ui/core/styles';
 
 export const useStyles = makeStyles(() => ({
   imagem: {
-    width: '7%',
+    width: '20%',
     marginLeft: '5%',
     marginTop: '10px',
   },
   appbar: {
-    height: '12%',
+    minHeight: ({ height = 65 }) => height,
     backgroundColor: '#41AF80',
   },
   content: {
