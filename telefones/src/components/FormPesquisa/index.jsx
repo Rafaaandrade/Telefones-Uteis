@@ -1,14 +1,13 @@
-import React, { useState } from 'react';
-import { Controller, FormProvider, useForm } from 'react-hook-form';
-import Select from '@material-ui/core/Select';
 import FormControl from '@material-ui/core/FormControl';
-import InputLabel from '@material-ui/core/InputLabel';
-import MenuItem from '@material-ui/core/MenuItem';
-import TextField from '@material-ui/core/TextField';
-import { useStyles } from './styles';
-import Box from '@material-ui/core/Box';
 import IconButton from '@material-ui/core/IconButton';
+import MenuItem from '@material-ui/core/MenuItem';
+import Select from '@material-ui/core/Select';
+import TextField from '@material-ui/core/TextField';
 import SearchIcon from '@material-ui/icons/Search';
+import React, { useState } from 'react';
+import { FormProvider, useForm } from 'react-hook-form';
+import BACKGROUND from './../../assets/images/background.jpg';
+import { useStyles } from './styles';
 
 const FormPesquisa = () => {
   const [dados, setDados] = useState('Juiz de Fora');
@@ -29,10 +28,15 @@ const FormPesquisa = () => {
   const { control, handleSubmit } = methods;
 
   return (
-    <>
-      <FormProvider {...methods}>
-        <form onSubmit={handleSubmit}>
-          <FormControl>
+    <div
+      style={{
+        backgroundImage: `url(${BACKGROUND})`,
+        width: '85%',
+      }}
+    >
+      <div className={styles.formBackground}>
+        <FormProvider {...methods}>
+          <form onSubmit={handleSubmit}>
             <div className={styles.test}>
               <Select
                 id='unidade'
@@ -41,7 +45,7 @@ const FormPesquisa = () => {
                 onChange={handleChange}
                 labelId='Unidade'
                 control={control}
-                style={{ backgroundColor: '#E5E5E5' }}
+                className={styles.select}
               >
                 {unidades.map((value, index) => (
                   <MenuItem key={index} value={value}>
@@ -49,22 +53,26 @@ const FormPesquisa = () => {
                   </MenuItem>
                 ))}
               </Select>
-              <br />
+
               <TextField
                 id='colab'
                 name='colaborador'
                 type='text'
                 label='Digite o nome do colaborador'
+                variant='filled'
                 className={styles.fieldColab}
               />
+
+              <div className={styles.btn}>
+                <IconButton color='primary'>
+                  <SearchIcon />
+                </IconButton>
+              </div>
             </div>
-          </FormControl>
-          <IconButton>
-            <SearchIcon />
-          </IconButton>
-        </form>
-      </FormProvider>
-    </>
+          </form>
+        </FormProvider>
+      </div>
+    </div>
   );
 };
 

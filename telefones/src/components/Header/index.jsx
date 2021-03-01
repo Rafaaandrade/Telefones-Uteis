@@ -9,7 +9,7 @@ const Header = () => {
 
   return (
     <>
-      <AppBar className={styles.appbar}>
+      <AppBar position='relative' className={styles.appbar}>
         <div className={styles.content}>
           <div>
             <img src={IMAGES} className={styles.imagem} alt='' />
